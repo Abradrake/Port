@@ -1,0 +1,1 @@
+These are univerity projects, not all of them will work without a server.
