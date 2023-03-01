@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <!--Av Anton Pålsson Abrahamsson och Therese Thorgersen-->
+    <!--Kommentar ovanför kod-->
+    <!--vanligt för HTML-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>labb 1</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        
+        <!--Svensk lista med ord-->
+      <h1>Ordöversättare</h1>
+        <p>Det här är orden som kan översättas:<br>
+        Blomma<br>
+        Katt<br>
+        Hund<br>
+        Kräfta<br>
+        Bord<br>
+        Papper<br>
+        Sko<br>
+        Cigarett<br>
+        Robot<br>
+        Dator</p>
+        
+        <!--Kopplar till PHP, metod GET-->
+        
+        <form action="mottagarsida_klar.php" method="get">
+  <label for="fname">Skriv ord du vill översätta:</label><br>
+  <input type="text" id="fname" name="ord"><br>
+  
+        
+        <br><br>
+        
+        <!--Radioknappar för språk-->
+            
+        <input type="radio" id="tyska" name="sprak" value="tyska">
+<label for="tyska">Tyska</label><br>
+        
+<input type="radio" id="engelska" name="sprak" value="engelska">
+<label for="engelska">Engelska</label><br>
+        
+<input type="radio" id="franska" name="sprak" value="franska">
+<label for="franska">Franska </label><br>
+        
+        <input type="radio" id="Spanska" name="sprak" value="spanska">
+<label for="spanska">Spanska</label><br>
+        
+<input type="radio" id="italienska" name="sprak" value="italienska">
+<label for="italienska">Italienska </label><br>
+      
+
+        <!--skickar/återställer data för process-->
+<input type="submit" value="submit"> <br>
+         <input type="reset" value="Reset">
+            </form>  
