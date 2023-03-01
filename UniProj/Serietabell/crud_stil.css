@@ -1,0 +1,127 @@
+
+head { 
+    
+}
+body{
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 0.9em;
+    background-color: aqua;
+    table-layout: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+   
+}
+
+
+h3 {
+  text-transform: uppercase;
+    padding: 5px;
+  text-align: center;
+  background-color: lightblue;
+  border: 5px solid navy;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    border-left: auto;
+    border-right: auto;
+  max-width: 550px;
+    margin-bottom: 10px;
+}
+
+p {
+     padding: 5px;
+  text-align: center;
+  background-color: lightblue;
+  border: 5px solid navy;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    border-left: auto;
+    border-right: auto;
+  max-width: 550px;
+    margin-bottom: 10px;
+    
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-left: auto;
+    border-right: auto;
+    align-content: center;
+    table-layout: auto;
+    text-align: center;
+    align-items: center;
+
+  
+}
+
+th, td {
+	border: 5px solid navy;
+	padding: 2px;
+    border-radius: 25px;
+    align-content: center;
+    align-items: center; 
+    vertical-align: bottom;
+    background-color: lightblue;
+    text-align: center;
+    
+}
+
+th{
+	text-align: left;
+	background-color: lightblue;
+    border-radius: 25px;
+    align-content: center;
+}
+
+td.yell{
+	background-color: lightblue;
+}
+div {
+    background-color: aqua;
+    
+}
+input {
+    border-radius: 25px;
+    text-align: center;
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: lightblue;
+  border: 5px solid navy;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    border-left: auto;
+    border-right: auto;
+  max-width: 550px;
+    margin-bottom: 10px;
+    
+
+}
+
+#panel {
+   padding: 8px;
+    display: none;
+  text-align: center;
+  background-color: lightblue;
+ border: 5px solid navy;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    border-left: auto;
+    border-right: auto;
+  max-width: 550px;
+}
