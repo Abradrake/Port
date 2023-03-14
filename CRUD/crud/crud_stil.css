@@ -1,0 +1,27 @@
+
+body{
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 0.9em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid #999;
+	padding: 4px;
+}
+
+th{
+	text-align: left;
+	background-color: #F6E8AB;
+}
+
+td.yell{
+	background-color: #F6E8AB;
+}
