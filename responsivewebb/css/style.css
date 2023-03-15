@@ -1,0 +1,236 @@
+body {
+    background-color: #f3f1f2;
+    line-height:1.6em; 
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+
+.container{
+   width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+/*Header**/
+header{
+    background:url(../bilder/botanical-cactus-close-up-305821.jpg) no-repeat;
+    color:#fff;
+    padding-top:20px;
+    min-height:70px;
+}
+
+header a{
+    color:grey;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+header ul{
+    margin:10px;
+    padding:10px;
+}
+
+header li{
+    float:left;
+    display:inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo{
+    float:left;
+    margin:0;
+}
+
+header nav{
+    float:right;
+    margin: 0px;
+    
+}
+
+header .highlight, header .current a{
+    color: #cc6600;
+    font-weight:bold;
+    
+}
+
+header a:hover{
+    color:#cc6600;
+    font-weight:bold;
+    
+}
+.orangetext{
+    color: #cc6600;
+}
+
+/*Showcase**/
+
+#showcase {
+    text-align: center;
+    min-height:600px;
+    background: url(../bilder/BAKGRUND.jpg) no-repeat 0 -300px;
+    padding:30px;
+   
+}
+
+#showcase h2{
+    margin-top: 350px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding:30px;
+}
+
+
+/*Undercase**/
+
+#undercase{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding:20px;
+     width: 100%;
+    
+}
+
+/*Boxar**/
+
+#boxes{
+    margin-top:10px;
+    
+}
+
+#boxes .box{
+    float:left;
+    width: 30%;
+    padding:10px;
+    text-align: center;
+}
+
+#boxes.box img{
+    width:90px;
+}
+
+#main{
+    float:left;
+    width:100%;
+    padding:0 30px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+footer{
+    background-color:#cc6600;
+    color:#fff;
+    text-align: center;
+    color:#fff;
+    text-transform:uppercase;
+    bottom:0;
+    width:100%;
+    height:100px;
+    position:absolute;
+}
+
+#sidebar{
+    float:right;
+    width:30%;
+    margin-top:10px;
+}
+
+#about-me{
+    float:none;
+    width:100%;
+    padding:0 30px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+#anlita{
+    float:none;
+    width:100%;
+    padding:40px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+#anlita h2 {
+    margin-top: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding:30px;
+    text-align:center;
+}
+
+
+.contact-form{
+    width:100%;
+    max-width: 600px;
+    position:absolute;
+    background: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.txtb{
+    border:1px solid gray;
+    margin:8px 0;
+    padding 10px 20px;
+    border-radius: 10px;
+}
+
+.txtb label{
+    display:block;
+    text-align: center;
+    font-size: 15px;
+    
+}
+
+.txtb input, txtb textarea{
+    width:100%;
+    border:none;
+    background:none;
+    outline:none;
+    text-align: center;
+    font-size:18px;
+    margin-top:7x;
+}
+
+.button{ 
+    display:inline-block;
+    background-color: #cc6600;
+    padding: 10px 0;
+    width: 100%;
+    color:#fff;
+    
+}
+
+@media(max-width:768px){
+    header #logo,
+    header nav,
+    header nav li,
+    #boxes .box{
+        
+        float:none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom:20px;
+    }
+    
+    #showcase h1{
+        margin-top:30px;
+        margin:20px;
+        padding:20px;
+    }
+    #anlita h2{
+        margin-top:30px;
+        margin:20px;
+        padding:20px;
+    }
+    footer {
+		display: none;
+	}
+}
+    
