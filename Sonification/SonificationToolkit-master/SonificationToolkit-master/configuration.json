@@ -1,0 +1,66 @@
+{
+    "version": 1,
+    "duration": 20,
+    "variableMappings": [
+        {
+            "name": "Brazil",
+            "id": 0,
+            "rowID": "20",
+            "gain": 0.5625,
+            "pan": -5,
+            "state": true,
+            "color": "#D4E09B",
+            "audioObjectID": 65,
+            "mappings": [
+                {
+                    "parameterID": 67,
+                    "inputLow": 37,
+                    "inputHigh": 43,
+                    "outputLow": 0.1,
+                    "outputHigh": 11.6,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 1
+                },
+                {
+                    "parameterID": 68,
+                    "inputLow": 37,
+                    "inputHigh": 41.58923512747875,
+                    "outputLow": 2836,
+                    "outputHigh": 10000,
+                    "relInputLow": 0,
+                    "relInputHigh": 0.764872521246459,
+                    "invert": false,
+                    "state": true,
+                    "id": 2
+                },
+                {
+                    "parameterID": 49,
+                    "inputLow": 37,
+                    "inputHigh": 43,
+                    "outputLow": 1244,
+                    "outputHigh": 10000,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 3
+                },
+                {
+                    "parameterID": 50,
+                    "inputLow": 37,
+                    "inputHigh": 43,
+                    "outputLow": 20,
+                    "outputHigh": 1000,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": true,
+                    "state": true,
+                    "id": 4
+                }
+            ]
+        }
+    ]
+}

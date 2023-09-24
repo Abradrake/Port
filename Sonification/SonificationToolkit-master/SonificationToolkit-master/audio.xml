@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio version="1.0" timeUnit="ms" gain="0">
+
+
+	<!--
+	This simple oscillator configuration uses a sawtooth
+	waveform and plays through a lowpass filter and a gainnode.
+	-->
+	<Chain id="Oscillator">
+		<var name="pitch" default="60" mapin="36, 80" steps="0,2,4,5,7,9,11,12" convert="MIDI->frequency"></var>
+		<var name="brightness" default="1000" mapin="50,10000" curve="3"></var>
+		<var name="volume" default="0" mapin="-30, 0" convert="dB->power"></var>
+		
+		<OscillatorNode type="sawtooth" frequency="$pitch" transitionTime="50"></OscillatorNode>
+		<BiquadFilterNode frequency="$brightness"></BiquadFilterNode>
+		<GainNode gain="-6dB"></GainNode>
+		<GainNode gain="$volume"></GainNode>
+	</Chain>
+
+
+	<!--
+
+	This configuration plays white noise using an AudioWorkletNode playing
+	band-pass BiquadFilterNode with Q set to 70 giving a whistling effect.
+	The signal is routed through a GainNode and a StereoPannerNode to add
+	accesspoints for modulation.
+	-->
+	<Chain id="Noise">
+		<var name="filter" default="300" mapin="200, 1000" curve="2"></var>
+		<var name="volume" default="0" mapin="-30, 0" convert="dB->power"></var>	
+
+		<AudioWorkletNode src="script/white-noise-processor.js"></AudioWorkletNode>
+		<BiquadFilterNode type="bandpass" frequency="$filter" Q="100"></BiquadFilterNode>
+		<GainNode gain="+12dB"></GainNode>
+		<GainNode gain="$volume"></GainNode>
+	</Chain>
+
+
+
+
+	<!--
+	The AudioBufferSourceNode is used to playback audio files. This setup
+	is good for playing back sound files LONGER than just a short hit. It is useful
+	for looped music (one or a few bars long) with a length up to maximum the length 
+	of the sonification itself.
+	-->
+	<Chain id="Loop">
+		<var name="playbackRate" default="1" mapin="0.1,2"></var>
+		<var name="brightness" default="10000" mapin="50,10000" curve="3"></var>
+		<var name="volume" default="0" mapin="-30, 0" convert="dB->power"></var>	
+
+		<AudioBufferSourceNode src="audio/loop1.mp3" loop="true" playbackRate="$playbackRate"></AudioBufferSourceNode>
+		<BiquadFilterNode type="lowpass" frequency="$brightness"></BiquadFilterNode>
+		<GainNode gain="$volume"></GainNode>
+	</Chain>
+
+	<!--
+	The AmbientAudio node is used for longer ambient audio files. It loops the audio
+	smoothly with a crossfade wich makes it poor for musical loops.
+	-->
+	<Chain id="Ambience">
+		<var name="brightness" default="10000" mapin="50,10000" curve="3"></var>
+		<var name="thinness" default="1000" mapin="20,1000" curve="3"></var>
+		<var name="volume" default="0" mapin="-30, 0" convert="dB->power"></var>	
+
+		<AmbientAudio src="audio/ambience.mp3"></AmbientAudio>
+		<BiquadFilterNode type="lowpass" frequency="$brightness"></BiquadFilterNode>
+		<BiquadFilterNode type="highpass" frequency="$thinness"></BiquadFilterNode>
+		<GainNode gain="$volume"></GainNode>
+	</Chain>
+
+
+
+	<!-- 
+	The "Synth" element makes it possible to trigger short sound files repeatedly.
+	In this example, two "Voice" elements with different sound files result in the two
+	files playing back one after another.
+	By setting voiceselect="random" the files will be randomly selected.
+	There can be any number of voices with different files.
+	-->
+	<Chain id="Footsteps">
+		<var name="triggerRate" default="1" mapin="0.1,20"></var>
+		<var name="brightness" default="10000" mapin="50,10000" curve="3"></var>
+		<var name="volume" default="0" mapin="-30, 0" convert="dB->power"></var>	
+
+		<Synth voiceselect="next" trigger="$triggerRate">
+			<Voice>
+				<AudioBufferSourceNode src="audio/step1.mp3"></AudioBufferSourceNode>
+			</Voice>
+			<Voice>
+				<AudioBufferSourceNode src="audio/step2.mp3"></AudioBufferSourceNode>
+			</Voice>
+		</Synth>
+
+		<BiquadFilterNode type="lowpass" frequency="$brightness"></BiquadFilterNode>
+		<GainNode gain="$volume"></GainNode>
+	</Chain>
+
+
+</Audio>
